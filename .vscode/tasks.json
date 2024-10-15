@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build C++ with SFML",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",  // Include debugging information
+                "C:/Users/ADMIN/OneDrive/Desktop/.vscode/3D Renderer Project.cpp",  // Path to your C++ source file
+                "-o", "C:/Users/ADMIN/OneDrive/Desktop/.vscode/3D Renderer Project.exe",  // Output file
+                "-I", "C:/msys64/ucrt64/include",  // Include directory for SFML headers
+                "-L", "C:/msys64/ucrt64/lib",  // Library directory for SFML libs
+                "-lsfml-graphics",  // Link SFML graphics library
+                "-lsfml-window",    // Link SFML window library
+                "-lsfml-system"     // Link SFML system library
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true  // Make this the default build task
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Build C++ file with SFML using g++"
+        }
+    ]
+}
